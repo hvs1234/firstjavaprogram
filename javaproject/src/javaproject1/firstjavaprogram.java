@@ -1,8 +1,4 @@
 package javaproject1;
-
+import java.util.Scanner;
 public class firstjavaprogram {
-
-	public static void main(String[] args) {
-          
-	}
 }
