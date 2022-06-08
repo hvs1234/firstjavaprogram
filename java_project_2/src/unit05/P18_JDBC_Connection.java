@@ -1,12 +1,5 @@
 package unit05;
-// TO add a library right click on project->properties->java build path->Libraries->Module path->Add library or Add external JARs 
 import java.sql.*;
-/*import java.beans.Statement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;*/
-
 public class P18_JDBC_Connection {
 
 	public static void main(String[] args) throws SQLException {
