@@ -29,11 +29,10 @@ class SwingInJava extends JFrame{
 	JTextField t1;
 	JTextField t2;
 	
-	JTextArea jt1; //Text area on the screen
-	
-	JButton b1; //creating a Button for sum
-	JButton b2; //creating a Button for multiply
-	JButton b3; //creating a Button for subtract
+	JTextArea jt1; 
+	JButton b1; 
+	JButton b2; 
+	JButton b3; 
 	
 	JRadioButton r1;
 	JRadioButton r2;
@@ -41,25 +40,24 @@ class SwingInJava extends JFrame{
 	JCheckBox c1;
 	JCheckBox c2;
 	
-	JList list; //Creating a list whose whole content is visible in once on screen
+	JList list; 
 	
-	JComboBox jb1; //creating a box consists of data whose a single chosen data is visible in the box, content present in box can be chosen in random depend upon user choice
+	JComboBox jb1; 
+	JLabel l1; 
+	JLabel l2; 
+	JLabel l3; 
+	JLabel l4; 
 	
-	JLabel l1; //to perform a specific task for which a button is created for sum, multiply, subtract 
-	JLabel l2; //to perform a specific task for which a button is created for gender knowing
-	JLabel l3; //to perform a specific task for which a button is created for Activity
-	JLabel l4; //to perform a specific task for which a button is created for Day Selection
-	
-	JTable jtb1; //creating table for information collection
+	JTable jtb1; 
 	
 	SwingInJava(){
 		
-		t1=new JTextField(30); //refer to the input area for the screen
-		t2=new JTextField(30); //refer to the input area for the screen
+		t1=new JTextField(30); 
+		t2=new JTextField(30); 
 		
-		b1=new JButton("Sum"); //Button created for calculating sum 
-		b2=new JButton("Multiply"); //Button created for calculating multiply 
-		b3=new JButton("Subtract"); //Button created for calculating subtract
+		b1=new JButton("Sum"); 
+		b2=new JButton("Multiply"); 
+		b3=new JButton("Subtract"); 
 		
 		r1 = new JRadioButton("MALE");
 		r2 = new JRadioButton("FEMALE");
@@ -67,27 +65,27 @@ class SwingInJava extends JFrame{
 		c1=new JCheckBox("Dancer!");
 		c2=new JCheckBox("Singer!");
 		
-		jt1 =new JTextArea(10,20); // allocating area for a text box whose dimension are present in bracket		
+		jt1 =new JTextArea(10,20); 		
 		
-		//String array to store weekdays
+		
 		String week[]= {"Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunday"};
 		
-		list=new JList(week); //creating a list of days of a week displaying all days in once in the form of a list 
+		list=new JList(week); 
 		
-		jb1=new JComboBox<>(week); //creating a box consists of days displaying a single selected day in the box having movable content of days
+		jb1=new JComboBox<>(week); 
 		
 		String data[][]= {{"101","Amit","670000"},{"102","Jai","780000"},{"101","Sachin","700000"}};
 		String column[]= {"ID","NAME","SALARY"};
 		
-		jtb1=new JTable(data,column); //consisting data of above string in table form
+		jtb1=new JTable(data,column); 
 		
-		l1=new JLabel("Result"); //Storing the result for display
-		l2=new JLabel("Gender"); //Storing the result for display
-		l3=new JLabel("Activity"); //Storing the result for display
-		l4=new JLabel("Day"); //Storing the result for display
+		l1=new JLabel("Result"); 
+		l2=new JLabel("Gender"); 
+		l3=new JLabel("Activity"); 
+		l4=new JLabel("Day"); 
 				
-		add(t1); //whenever we create a field whether it is area, button or anything it's being necessary to add it 
-		add(t2); // if not added then creating that particular field have no use 
+		add(t1); 
+		add(t2); 
 		
 		add(b1);
 		add(b2);
@@ -117,27 +115,27 @@ class SwingInJava extends JFrame{
 		add(l4);
 		
 		
-		ActionListener al=new ActionListener() { // for performing a specific task ActionListener is used
+		ActionListener al=new ActionListener() { 
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			
-				int a1=Integer.parseInt(t1.getText()); //taking input
-				int a2=Integer.parseInt(t2.getText()); //taking input
+				int a1=Integer.parseInt(t1.getText()); 
+				int a2=Integer.parseInt(t2.getText()); 
 				
-				if(e.getSource()==b1) { //checking for the particular button pressed for the task asked to be performed 
+				if(e.getSource()==b1) { 
 				Integer sum=a1+a2;
-				l1.setText(sum.toString()); //Storing result in l1 label
+				l1.setText(sum.toString()); 
 				}
 				
-				if(e.getSource()==b2) { //checking for the particular button pressed for the task asked to be performed
+				if(e.getSource()==b2) { 
 					Integer multiply=a1*a2;
-					l1.setText(multiply.toString()); //Storing result in l1 label
+					l1.setText(multiply.toString()); 
 				}
 				
-				if(e.getSource()==b3) { //checking for the particular button pressed for the task asked to be performed
+				if(e.getSource()==b3) { 
 					Integer subtract=a1-a2;
-					l1.setText(subtract.toString()); //Storing result in l1 label
+					l1.setText(subtract.toString()); 
 				}
 				
 				if(r1.isSelected()) {
@@ -171,10 +169,6 @@ class SwingInJava extends JFrame{
 		b1.addActionListener(al);
 		b2.addActionListener(al);
 		b3.addActionListener(al);
-		/*
-		 * below four steps are to be performed in every swing as they refer to the size, format, visibility and closing of the box.
-		*/
-		 
 		setLayout(new FlowLayout());
 		setVisible(true);
 		setSize(500,500);
