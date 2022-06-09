@@ -21,16 +21,16 @@ public class P17_DisplayGraphics_GUI extends Canvas {
 
 	public void paint(Graphics grap) {
 
-//		grap.drawOval(25, 140, 40, 70);
+		grap.drawOval(25, 140, 40, 70);
 		
-//		grap.drawLine(FRAMEBITS, ERROR, ALLBITS, ABORT);
-//		
+		grap.drawLine(FRAMEBITS, ERROR, ALLBITS, ABORT);
+		
 		setForeground(Color.RED);
-//		grap.fillOval(140, 140, 40, 60);
-//		
+		grap.fillOval(140, 140, 40, 60);
+		
 		grap.drawArc(10, 20, 140, 150, 90, 60);
-//
-//		grap.drawRect(150, 40, 140, 60);
+
+		grap.drawRect(150, 40, 140, 60);
 		
 	}
 
